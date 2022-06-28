@@ -1,8 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   copy_strs.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/28 16:34:00 by jleroux           #+#    #+#             */
+/*   Updated: 2022/06/28 16:38:50 by jleroux          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-//Copy every element of an array of strings into a new array of string except the first element.
-//Returns the new array
-char **copy_strs(char **strs, int size)
+char	**copy_strs(char **strs, int size)
 {
 	char	**new_strs;
 	int		i;

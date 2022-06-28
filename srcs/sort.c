@@ -56,7 +56,7 @@ void	sort5(t_stack *a, t_stack *b)
 
 int	get_pivot(t_stack stack, int chunk_size, int j)
 {
-	if (stack.size < stack.arr[j * stack.size/ chunk_size])
+	if (j >= chunk_size)
 		return (stack.arr[stack.size - 1]);
 	else
 		return (stack.arr[j * stack.size/ chunk_size]);
@@ -87,29 +87,26 @@ void	chunck_to_a(t_stack *a, t_stack *b)
 		//pivot = sorted.arr[++j * sorted.size / chunk_size];
 		target1 = top(a, pivot);
 		target2 = bot(a, pivot);
-		if (target1 <= a->size - target2 + 1)
-			smart_rotate('a', a, target1, 0);
+		if (target1 < a->size - target2)
+			smart_rotate('a', a, target1, 1);
 		else
-			smart_rotate('a', a, target2, 0);
+			smart_rotate('a', a, target2, 1);
 		push('b', a, b);
+		if (b->arr[0] < b->arr[1])
+			swap('b', b);
 		i++;
 	}
 	free(sorted.arr);
 }
 
-void	push_back_to_b(t_stack *a, t_stack *b)
-{
-	while (b->size > 0)
-		{
-			smart_rotate('b', b, get_biggest(b), 1);
-			push('a', b, a);
-		}
-}
-
 void sort_max(t_stack *a, t_stack *b)
 {
 	chunck_to_a(a, b);
-	push_back_to_b(a, b);
+	while (b->size > 0)
+	{
+		smart_rotate('b', b, get_biggest(b), 0);
+		push('a', b, a);
+	}
 }
 
 void	sort(t_stack *a, t_stack *b)

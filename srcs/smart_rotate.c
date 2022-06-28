@@ -13,11 +13,12 @@ void	smart_rotate(char ch, t_stack *stack, int target, int bigger)
 			rev_rotate(ch, stack);
 		else
 		{
-			if (bigger && stack->arr[1] > stack->arr[0] &&stack->arr[1] == target_value) 
-				swap(ch, stack);
-			else if (!bigger && stack->arr[1] < stack->arr[0] && stack->arr[1] == target_value)
-				swap(ch, stack);
-			else
+			(void)bigger;
+		//	if (bigger && stack->arr[1] > stack->arr[0] && stack->arr[1] == target_value) 
+		//		swap(ch, stack);
+		//	else if (!bigger && stack->arr[1] < stack->arr[0] && stack->arr[1] == target_value)
+		//		swap(ch, stack);
+		//	else
 				rotate(ch, stack);
 		}
 	}
