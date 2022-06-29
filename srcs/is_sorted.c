@@ -2,7 +2,7 @@
 
 int	is_sorted(t_stack *stack)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < stack->size - 1)

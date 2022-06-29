@@ -14,7 +14,7 @@
 
 void	swap(char ch, t_stack *stack)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = stack->arr[0];
 	stack->arr[0] = stack->arr[1];

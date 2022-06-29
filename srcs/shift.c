@@ -1,7 +1,7 @@
 //Move every element of the array one position to the left.
 void	shift_left(int *arr, int size)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size - 1)
@@ -14,7 +14,7 @@ void	shift_left(int *arr, int size)
 //Move every element of the array one position to the right.
 void	shift_right(int *arr, int size)
 {
-	int i;
+	int	i;
 
 	i = size - 1;
 	while (i > 0)

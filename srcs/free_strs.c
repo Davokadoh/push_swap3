@@ -13,7 +13,7 @@
 #include "push_swap.h"
 
 //Free every string in the array of strings.
-void free_strs(char **strs)
+void	free_strs(char **strs)
 {
 	int		i;
 

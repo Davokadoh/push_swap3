@@ -2,7 +2,7 @@
 
 void	rotate(char ch, t_stack *stack)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = stack->arr[0];
 	shift_left(stack->arr, stack->size);
@@ -14,7 +14,7 @@ void	rotate(char ch, t_stack *stack)
 
 void	rev_rotate(char ch, t_stack *stack)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = stack->arr[stack->size - 1];
 	shift_right(stack->arr, stack->size);

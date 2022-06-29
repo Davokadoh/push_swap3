@@ -1,4 +1,5 @@
 #include "push_swap.h"
+#include "libft.h"
 
 //Converts an array of strings to an array of integers.
 int	*strs_to_ints(char **strs)
@@ -11,7 +12,7 @@ int	*strs_to_ints(char **strs)
 	while (strs[i] != NULL)
 	{
 		if (is_int(strs[i]))
-			ints[i] = atoi(strs[i]);
+			ints[i] = ft_atol(strs[i]);
 		else
 			ints[i] = 0;
 		i++;

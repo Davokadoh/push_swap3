@@ -15,10 +15,10 @@
 t_stack	create_empty_stack(int size)
 {
 	t_stack	stack;
-	
+
 	stack.arr = (int *)malloc(sizeof(int) * size);
-	//Need to protect malloc
-	//Need to set calloc instead of malloc! Or bzero
+	if (!stack.arr)
+		return (NULL);
 	stack.size = 0;
 	return (stack);
 }
