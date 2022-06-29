@@ -6,20 +6,20 @@
 /*   By: jleroux <jleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 10:59:58 by jleroux           #+#    #+#             */
-/*   Updated: 2022/06/29 11:23:15 by jleroux          ###   ########.fr       */
+/*   Updated: 2022/06/29 13:45:02 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "libft.h"
 
-int	*strs_to_ints(char **strs)
+long int	*strs_to_ints(char **strs)
 {
-	int	i;
-	int	*ints;
+	int			i;
+	long int	*ints;
 
 	i = 0;
-	ints = (int *)malloc(sizeof(int) * count_arr(strs));
+	ints = (long int *)malloc(sizeof(long int) * count_arr(strs));
 	while (strs[i] != NULL)
 	{
 		if (is_int(strs[i]))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   copy_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: jleroux <jleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:33:55 by jleroux           #+#    #+#             */
-/*   Updated: 2022/06/28 16:33:57 by jleroux          ###   ########.fr       */
+/*   Updated: 2022/06/29 13:46:36 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_stack	copy_stack(t_stack *src)
 	int		i;
 
 	new.size = src->size;
-	new.arr = (int *)malloc(sizeof(int) * (new.size));
+	new.arr = (long int *)malloc(sizeof(long int) * (new.size));
 	i = -1;
 	while (++i < new.size)
 		new.arr[i] = src->arr[i];

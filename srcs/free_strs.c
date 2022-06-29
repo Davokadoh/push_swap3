@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   free_strs.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: jleroux <jleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:34:12 by jleroux           #+#    #+#             */
-/*   Updated: 2022/06/28 16:35:10 by jleroux          ###   ########.fr       */
+/*   Updated: 2022/06/29 13:46:26 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//Free every string in the array of strings.
 void	free_strs(char **strs)
 {
 	int		i;

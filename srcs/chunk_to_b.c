@@ -6,7 +6,7 @@
 /*   By: jleroux <jleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:01:35 by jleroux           #+#    #+#             */
-/*   Updated: 2022/06/29 12:29:21 by jleroux          ###   ########.fr       */
+/*   Updated: 2022/06/29 13:49:00 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ static void	get_target(t_stack *a, int pivot)
 	target1 = top(a, pivot);
 	target2 = bot(a, pivot);
 	if (target1 < a->size - target2)
-		smart_rotate('a', a, target1, 1);
+		smart_rotate('a', a, target1);
 	else
-		smart_rotate('a', a, target2, 1);
+		smart_rotate('a', a, target2);
 }
 
 void	chunk_to_b(t_stack *a, t_stack *b)
