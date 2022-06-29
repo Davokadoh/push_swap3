@@ -1,4 +1,15 @@
-//Move every element of the array one position to the left.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   shift.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/29 10:59:29 by jleroux           #+#    #+#             */
+/*   Updated: 2022/06/29 10:59:35 by jleroux          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 void	shift_left(int *arr, int size)
 {
 	int	i;
@@ -11,7 +22,6 @@ void	shift_left(int *arr, int size)
 	}
 }
 
-//Move every element of the array one position to the right.
 void	shift_right(int *arr, int size)
 {
 	int	i;

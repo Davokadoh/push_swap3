@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strs_to_ints.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jleroux <jleroux@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/29 10:59:58 by jleroux           #+#    #+#             */
+/*   Updated: 2022/06/29 11:23:15 by jleroux          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 #include "libft.h"
 
-//Converts an array of strings to an array of integers.
 int	*strs_to_ints(char **strs)
 {
 	int	i;

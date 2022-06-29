@@ -8,6 +8,7 @@ INCLUDES		=	$(addprefix -I,$(INCLUDES_DIRS))
 LIBS			=	$(LIBFT_DIR)/libft.a
 _SRCS 			=	bubble_sort.c \
 					check_input.c \
+					chunk_to_b.c \
 					copy_stack.c \
 					copy_strs.c \
 					count_arr.c \

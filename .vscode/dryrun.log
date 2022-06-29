@@ -1,8 +1,9 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/jleroux/Workspace/push_swap2'
+make: Entering directory `/Users/jleroux/Workspace/push_swap3'
 /Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./libft
-make[1]: Entering directory `/Users/jleroux/Workspace/push_swap2/libft'
+make[1]: Entering directory `/Users/jleroux/Workspace/push_swap3/libft'
 gcc -Wall -Wextra -Werror -I.   -c -o ft_atoi.o ft_atoi.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_atol.o ft_atol.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_bzero.o ft_bzero.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_calloc.o ft_calloc.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_isalnum.o ft_isalnum.c
@@ -36,11 +37,12 @@ gcc -Wall -Wextra -Werror -I.   -c -o ft_putchar_fd.o ft_putchar_fd.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_putstr_fd.o ft_putstr_fd.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_putendl_fd.o ft_putendl_fd.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_putnbr_fd.o ft_putnbr_fd.c
-ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_strchr.o ft_strdup.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_tolower.o ft_toupper.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
-make[1]: Leaving directory `/Users/jleroux/Workspace/push_swap2/libft'
+ar rcs libft.a ft_atoi.o ft_atol.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_strchr.o ft_strdup.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_tolower.o ft_toupper.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
+make[1]: Leaving directory `/Users/jleroux/Workspace/push_swap3/libft'
 mkdir -p .
 cc -c -Wall -Wextra -Werror  -o bubble_sort.o srcs/bubble_sort.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o check_input.o srcs/check_input.c -I./includes -I./libft
+cc -c -Wall -Wextra -Werror  -o chunk_to_b.o srcs/chunk_to_b.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o copy_stack.o srcs/copy_stack.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o copy_strs.o srcs/copy_strs.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o count_arr.o srcs/count_arr.c -I./includes -I./libft
@@ -53,15 +55,15 @@ cc -c -Wall -Wextra -Werror  -o is_sorted.o srcs/is_sorted.c -I./includes -I./li
 cc -c -Wall -Wextra -Werror  -o push_swap.o srcs/push_swap.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o push.o srcs/push.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o rotate.o srcs/rotate.c -I./includes -I./libft
- 
 cc -c -Wall -Wextra -Werror  -o shift.o srcs/shift.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o smart_rotate.o srcs/smart_rotate.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o sort.o srcs/sort.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o strs_to_ints.o srcs/strs_to_ints.c -I./includes -I./libft
 cc -c -Wall -Wextra -Werror  -o swap.o srcs/swap.c -I./includes -I./libft
 /Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./libft
-make[1]: Entering directory `/Users/jleroux/Workspace/push_swap2/libft'
+make[1]: Entering directory `/Users/jleroux/Workspace/push_swap3/libft'
 gcc -Wall -Wextra -Werror -I.   -c -o ft_atoi.o ft_atoi.c
+gcc -Wall -Wextra -Werror -I.   -c -o ft_atol.o ft_atol.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_bzero.o ft_bzero.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_calloc.o ft_calloc.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_isalnum.o ft_isalnum.c
@@ -95,8 +97,8 @@ gcc -Wall -Wextra -Werror -I.   -c -o ft_putchar_fd.o ft_putchar_fd.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_putstr_fd.o ft_putstr_fd.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_putendl_fd.o ft_putendl_fd.c
 gcc -Wall -Wextra -Werror -I.   -c -o ft_putnbr_fd.o ft_putnbr_fd.c
-ar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_strchr.o ft_strdup.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_tolower.o ft_toupper.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
-make[1]: Leaving directory `/Users/jleroux/Workspace/push_swap2/libft'
-cc -Wall -Wextra -Werror  -o push_swap  ./bubble_sort.o  ./check_input.o  ./copy_stack.o  ./copy_strs.o  ./count_arr.o  ./create_empty_stack.o  ./free_strs.o  ./get_biggest.o  ./get_smallest.o  ./is_int.o  ./is_sorted.o  ./push_swap.o  ./push.o  ./rotate.o  ./shift.o  ./smart_rotate.o  ./sort.o  ./strs_to_ints.o  ./swap.o ./libft/libft.a
-make: Leaving directory `/Users/jleroux/Workspace/push_swap2'
+ar rcs libft.a ft_atoi.o ft_atol.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_strchr.o ft_strdup.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_tolower.o ft_toupper.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_striteri.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
+make[1]: Leaving directory `/Users/jleroux/Workspace/push_swap3/libft'
+cc -Wall -Wextra -Werror  -o push_swap  ./bubble_sort.o  ./check_input.o  ./chunk_to_b.o  ./copy_stack.o  ./copy_strs.o  ./count_arr.o  ./create_empty_stack.o  ./free_strs.o  ./get_biggest.o  ./get_smallest.o  ./is_int.o  ./is_sorted.o  ./push_swap.o  ./push.o  ./rotate.o  ./shift.o  ./smart_rotate.o  ./sort.o  ./strs_to_ints.o  ./swap.o ./libft/libft.a
+make: Leaving directory `/Users/jleroux/Workspace/push_swap3'
  

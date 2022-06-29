@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue Jun 28 12:30:44 2022
+# Make data base, printed on Wed Jun 29 11:15:35 2022
 
 # Variables
 
@@ -29,7 +29,7 @@ INCLUDES = $(addprefix -I,$(INCLUDES_DIRS))
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/jleroux/Workspace/push_swap2
+CURDIR := /Users/jleroux/Workspace/push_swap3
 # makefile
 SHELL = /bin/sh
 # environment
@@ -40,20 +40,20 @@ _ = /usr/bin/make
 CFLAGS = -Wall -Wextra -Werror 
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 32)
+# makefile (from `Makefile', line 33)
 SRCS = $(patsubst %, $(SRCS_DIR)/%, $(_SRCS))
 # environment
 VSCODE_VERBOSE_LOGGING = true
-# makefile (from `Makefile', line 31)
+# makefile (from `Makefile', line 32)
 OBJS = $(patsubst %.c, $(OBJS_DIR)/%.o, $(_SRCS))
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cb0w0032r7/T/vscode-ipc-3a3efee8-7515-4e7f-a9c9-10c73aa73d73.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cb0w0032r7/T/vscode-ipc-07226cef-6c43-4b57-b169-57b6f183f103.sock
 # environment
 VSCODE_CWD = /
 # environment
 PATH = /Users/jleroux/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki
 # makefile (from `Makefile', line 9)
-_SRCS = bubble_sort.c check_input.c copy_stack.c copy_strs.c count_arr.c create_empty_stack.c free_strs.c get_biggest.c get_smallest.c is_int.c is_sorted.c push_swap.c push.c rotate.c shift.c smart_rotate.c sort.c strs_to_ints.c swap.c 
+_SRCS = bubble_sort.c check_input.c chunk_to_b.c copy_stack.c copy_strs.c count_arr.c create_empty_stack.c free_strs.c get_biggest.c get_smallest.c is_int.c is_sorted.c push_swap.c push.c rotate.c shift.c smart_rotate.c sort.c strs_to_ints.c swap.c 
 # makefile (from `Makefile', line 3)
 SRCS_DIR = ./srcs
 # environment
@@ -65,7 +65,7 @@ ELECTRON_RUN_AS_NODE = 1
 # makefile (from `Makefile', line 5)
 LIBFT_DIR = ./libft
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Z3SMtWkxtd/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.U2BewoftXo/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -73,8 +73,8 @@ HOMEBREW_TEMP = /tmp/jleroux/Homebrew/Temp
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/jleroux/Workspace/push_swap2
-# makefile (from `Makefile', line 29)
+PWD = /Users/jleroux/Workspace/push_swap3
+# makefile (from `Makefile', line 30)
 OBJS_BONUS = $(patsubst %.c, $(OBJS_DIR)/%.o, $(_SRCS_BONUS))
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
@@ -131,7 +131,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2144
+XPC_SERVICE_NAME = com.microsoft.VSCode.2136
 # makefile (from `Makefile', line 4)
 OBJS_DIR = .
 # automatic
@@ -159,7 +159,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 18389
+VSCODE_PID = 20840
 # variable set hash-table stats:
 # Load=74/1024=7%, Rehash=0, Collisions=5/109=5%
 
@@ -169,16 +169,16 @@ VSCODE_PID = 18389
 
 # Directories
 
-# . (device 16777225, inode 884870): 33 files, no impossibilities.
-# ./srcs (device 16777225, inode 884787): 22 files, no impossibilities so far.
-# srcs (device 16777225, inode 884787): 22 files, no impossibilities so far.
+# . (device 16777225, inode 897863): 36 files, no impossibilities.
+# ./srcs (device 16777225, inode 897937): 23 files, no impossibilities so far.
+# srcs (device 16777225, inode 897937): 23 files, no impossibilities so far.
 
-# 77 files, no impossibilities in 3 directories.
+# 82 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 %.o: ./srcs/%.c | .
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
@@ -189,28 +189,28 @@ VSCODE_PID = 18389
 shift.o: srcs/shift.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `shift'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 .:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-28 12:30:43
+#  Last modified 2022-06-29 11:15:02
 #  File has been updated.
 #  Successfully updated.
-#  commands to execute (from `Makefile', line 49):
+#  commands to execute (from `Makefile', line 50):
 	@mkdir -p $@
 	
 
 # Not a target:
 srcs/is_sorted.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:58:35
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -219,7 +219,7 @@ srcs/is_sorted.c:
 # Not a target:
 srcs/is_int.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -228,36 +228,36 @@ srcs/is_int.c:
 get_biggest.o: srcs/get_biggest.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `get_biggest'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 is_sorted.o: srcs/is_sorted.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `is_sorted'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 copy_strs.o: srcs/copy_strs.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `copy_strs'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
@@ -274,12 +274,12 @@ all: push_swap
 free_strs.o: srcs/free_strs.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `free_strs'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
@@ -291,7 +291,7 @@ free_strs.o: srcs/free_strs.c | .
 # Not a target:
 srcs/count_arr.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -300,20 +300,20 @@ srcs/count_arr.c:
 is_int.o: srcs/is_int.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `is_int'
-#  Last modified 2022-06-28 12:29:33
  
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 srcs/sort.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 11:08:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -322,7 +322,7 @@ srcs/sort.c:
 # Not a target:
 srcs/get_smallest.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -331,19 +331,19 @@ srcs/get_smallest.c:
 rotate.o: srcs/rotate.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `rotate'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 srcs/push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:59:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -358,19 +358,19 @@ srcs/push_swap.c:
 push.o: srcs/push.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 11:08:40
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -379,24 +379,24 @@ Makefile:
 count_arr.o: srcs/count_arr.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `count_arr'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 sort.o: srcs/sort.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort'
-#  Last modified 2022-06-28 12:29:34
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
@@ -405,26 +405,26 @@ test: re
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 62):
+#  commands to execute (from `Makefile', line 63):
 	./$(TARGET) 5 4 3 2 1 | ./checker_Mac 5 4 3 2 1
 	
 
 bubble_sort.o: srcs/bubble_sort.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `bubble_sort'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 srcs/get_biggest.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:58:26
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -432,10 +432,10 @@ srcs/get_biggest.c:
 
 libft/libft.a:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
-#  commands to execute (from `Makefile', line 59):
+#  commands to execute (from `Makefile', line 60):
 	$(MAKE) -C $(LIBFT_DIR)
 	
 
@@ -450,7 +450,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 43):
+#  commands to execute (from `Makefile', line 44):
 	$(MAKE) -C $(LIBFT_DIR) fclean
 	rm -f $(TARGET)
 	
@@ -460,7 +460,7 @@ norminette:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 65):
+#  commands to execute (from `Makefile', line 66):
 	-norminette $(SRCS) ft_printf.h
 	-norminette $(LIBFT_DIR)
 	
@@ -468,7 +468,7 @@ norminette:
 # Not a target:
 srcs/free_strs.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -477,7 +477,7 @@ srcs/free_strs.c:
 # Not a target:
 srcs/copy_stack.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -486,7 +486,7 @@ srcs/copy_stack.c:
 # Not a target:
 srcs/create_empty_stack.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:50:08
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -501,7 +501,7 @@ srcs/create_empty_stack.c:
 # Not a target:
 srcs/swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -518,7 +518,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 39):
+#  commands to execute (from `Makefile', line 40):
 	$(MAKE) -C $(LIBFT_DIR) clean
 	rm -f $(OBJS) $(OBJS_BONUS)
 	
@@ -526,7 +526,7 @@ clean:
 # Not a target:
 srcs/strs_to_ints.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 11:00:03
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -535,7 +535,7 @@ srcs/strs_to_ints.c:
 # Not a target:
 srcs/check_input.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -544,23 +544,23 @@ srcs/check_input.c:
 push_swap.o: srcs/push_swap.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
-push_swap: libft/libft.a bubble_sort.o check_input.o copy_stack.o copy_strs.o count_arr.o create_empty_stack.o free_strs.o get_biggest.o get_smallest.o is_int.o is_sorted.o push_swap.o push.o rotate.o shift.o smart_rotate.o sort.o strs_to_ints.o swap.o
+push_swap: libft/libft.a bubble_sort.o check_input.o chunk_to_b.o copy_stack.o copy_strs.o count_arr.o create_empty_stack.o free_strs.o get_biggest.o get_smallest.o is_int.o is_sorted.o push_swap.o push.o rotate.o shift.o smart_rotate.o sort.o strs_to_ints.o swap.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-28 12:29:34
+#  Last modified 2022-06-29 11:14:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 55):
+#  commands to execute (from `Makefile', line 56):
 	$(MAKE) -C $(LIBFT_DIR)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
 	
@@ -568,32 +568,32 @@ push_swap: libft/libft.a bubble_sort.o check_input.o copy_stack.o copy_strs.o co
 copy_stack.o: srcs/copy_stack.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `copy_stack'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 create_empty_stack.o: srcs/create_empty_stack.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `create_empty_stack'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
-# variable set hash-table stats:
  
+# variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 srcs/push.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:58:42
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -602,7 +602,16 @@ srcs/push.c:
 # Not a target:
 srcs/smart_rotate.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:59:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+srcs/chunk_to_b.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-29 11:13:49
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -611,43 +620,43 @@ srcs/smart_rotate.c:
 swap.o: srcs/swap.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `swap'
-#  Last modified 2022-06-28 12:29:34
+#  Last modified 2022-06-29 11:14:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 get_smallest.o: srcs/get_smallest.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `get_smallest'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 check_input.o: srcs/check_input.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `check_input'
-#  Last modified 2022-06-28 12:29:33
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 srcs/shift.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:59:35
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -656,7 +665,7 @@ srcs/shift.c:
 # Not a target:
 srcs/rotate.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:59:24
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -665,19 +674,19 @@ srcs/rotate.c:
 strs_to_ints.o: srcs/strs_to_ints.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `strs_to_ints'
-#  Last modified 2022-06-28 12:29:34
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 srcs/copy_strs.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -686,26 +695,38 @@ srcs/copy_strs.c:
 smart_rotate.o: srcs/smart_rotate.c | .
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `smart_rotate'
-#  Last modified 2022-06-28 12:29:34
+#  Last modified 2022-06-29 11:14:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 52):
+#  commands to execute (from `Makefile', line 53):
+	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
+	
+
+chunk_to_b.o: srcs/chunk_to_b.c | .
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `chunk_to_b'
+#  Last modified 2022-06-29 11:14:00
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 53):
 	$(CC) -c $(CFLAGS) -o $@ $^ $(INCLUDES)
 	
 
 # Not a target:
 srcs/bubble_sort.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 12:26:22
+#  Last modified 2022-06-29 10:47:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=52/1024=5%, Rehash=0, Collisions=25/192=13%
+# Load=54/1024=5%, Rehash=0, Collisions=26/200=13%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -717,6 +738,6 @@ srcs/bubble_sort.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Jun 28 12:30:44 2022
+# Finished Make data base on Wed Jun 29 11:15:35 2022
 
  
