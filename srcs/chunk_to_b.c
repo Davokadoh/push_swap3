@@ -6,7 +6,7 @@
 /*   By: jleroux <jleroux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 11:01:35 by jleroux           #+#    #+#             */
-/*   Updated: 2022/06/29 11:43:34 by jleroux          ###   ########.fr       */
+/*   Updated: 2022/06/29 12:29:21 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	chunk_to_b(t_stack *a, t_stack *b)
 	sorted = copy_stack(a);
 	bubble_sort(&sorted);
 	if (sorted.size <= 100)
-		chunk_size = 6;
+		chunk_size = 5;
 	else
 		chunk_size = 11;
 	i = 0;
@@ -83,8 +83,6 @@ void	chunk_to_b(t_stack *a, t_stack *b)
 			pivot = get_pivot(sorted, chunk_size, ++j);
 		get_target(a, pivot);
 		push('b', a, b);
-		//if (b->arr[0] < b->arr[1])
-		//	swap('b', b);
 		i++;
 	}
 	free(sorted.arr);
